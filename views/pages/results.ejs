@@ -1,4 +1,4 @@
-<!-- views/pages/index.ejs -->
+<!-- views/pages/results.ejs -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,9 +12,18 @@
 </header>
 
 <main>
-
-    <!-- results page -->
-    
+    <div id="books" class="books">
+        <% jsonData.forEach(data => { %>
+        <% console.log(data.id._attributes.nativeid); %>
+            <div class="book">
+                <h2 class="title">Titel</h2>
+                <img class="cover" src="https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=301033811&isbn=&lid=&aut=&ti=&size=70"></h2>
+                <p class="description">Beschrijving komt hier</p>
+                <a href="/availability/FRABLKOMTHIER">Beschikbaarheid</a>
+            </div>
+        <% }); %>
+        </div>
+    </div>  
 </main>
 
 <footer>
