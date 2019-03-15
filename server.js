@@ -5,24 +5,27 @@ const port = 4000
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
+app.use(express.static(__dirname + '/public'));
+
 // index page 
 app.get('/', function(req, res) {
-    res.render('pages/index');
+    res.render('pages/home');
 });
 
-// about page 
-app.get('/about', function(req, res) {
-    res.render('pages/about');
+// home page 
+app.get('/home', function(req, res) {
+    res.render('pages/home');
 });
 
-//http://localhost:4000/home
-app.get('/home', function (req, res) {
-    res.send('Dit is de homepage');
+// results page
+app.get('/results', function (req, res) {
+    res.render('pages/results');
 })
 
-//http://localhost:4000/users/654
-app.get('/users/:userID', function (req, res) {
-    res.send(req.params);
+// availability page
+app.get('/availability/:frabl', function (req, res) {
+    // res.send(req.params);
+    res.render('pages/availability');
 })
 
 app.use(express.static('public'))
