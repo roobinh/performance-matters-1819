@@ -33,6 +33,8 @@ app.get('/availability/:frabl', function (req, res) {
     // res.send(req.params);
     const json = require('./public/data/dolfje_availability.json');
 
+    // Data hier strippen/mappen
+
     res.render('pages/availability', {
         jsonData: json,
         frabl: req.params

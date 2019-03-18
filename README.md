@@ -37,3 +37,9 @@ npm start
 - Door middel van NPM Scripts (momenteel alleen npm start)
 - [ ] (optioneel) OBA API in applicatie verwerken
 
+
+Hulpbestanden:
+
+github.com/vandijkstef/performance-matters-1819
+-> node advanced
+

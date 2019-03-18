@@ -14,9 +14,9 @@
 <main>
     <div id="books" class="books">
         <% jsonData.forEach(data => { %>
-        <% console.log(data.id._attributes.nativeid); %>
+            <% console.log(data.id._attributes.nativeid); %>
             <div class="book">
-                <h2 class="title">Titel</h2>
+                <h2 class="title"><%- data.id._attributes.nativeid %></h2>
                 <img class="cover" src="https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=301033811&isbn=&lid=&aut=&ti=&size=70"></h2>
                 <p class="description">Beschrijving komt hier</p>
                 <a href="/availability/FRABLKOMTHIER">Beschikbaarheid</a>
