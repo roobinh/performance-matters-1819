@@ -55,12 +55,6 @@
                         "translation": "Cover"
                     },
                     "_text": "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=334622840&isbn=9789025859299&lid=&aut=&ti=&size=70"
-                },
-                {
-                    "_attributes": {
-                        "translation": "Cover"
-                    },
-                    "_text": "https://v19.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/334622840&token=c1322402"
                 }
             ]
         },
@@ -516,12 +510,6 @@
                         "translation": "Cover"
                     },
                     "_text": "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=270066586&isbn=9789066921863&lid=&aut=&ti=&size=70"
-                },
-                {
-                    "_attributes": {
-                        "translation": "Cover"
-                    },
-                    "_text": "https://v19.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/270066586&token=c1322402"
                 }
             ]
         },
@@ -533,26 +521,16 @@
                 "\n        ",
                 "\n      "
             ],
-            "title": [
-                {
-                    "_attributes": {
-                        "translation": "Titel",
-                        "search-method": "title",
-                        "search-term": "Dolfje Weerwolfje",
-                        "search-type": "fuzzy"
-                    },
-                    "_text": "Dolfje Weerwolfje"
+            "title": {
+                "_attributes": {
+                    "translation": "Titel",
+                    "search-method": "title",
+                    "search-term": "Dolfje Weerwolfje",
+                    "search-type": "fuzzy"
                 },
-                {
-                    "_attributes": {
-                        "translation": "Titel",
-                        "search-method": "title",
-                        "search-term": "Dolfje Weerwolfje / Paul van Loon",
-                        "search-type": "fuzzy"
-                    },
-                    "_text": "Dolfje Weerwolfje / Paul van Loon"
-                }
-            ],
+                "_text": "Dolfje Weerwolfje"
+            }
+            ,
             "short-title": [
                 {
                     "_attributes": {
@@ -818,12 +796,6 @@
                         "translation": "Cover"
                     },
                     "_text": "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=339543787&isbn=&lid=&aut=&ti=&size=70"
-                },
-                {
-                    "_attributes": {
-                        "translation": "Cover"
-                    },
-                    "_text": "https://v19.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/339543787&token=c1322402"
                 }
             ]
         },
@@ -1125,12 +1097,6 @@
                         "translation": "Cover"
                     },
                     "_text": "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=373572034&isbn=9789025866525&lid=&aut=&ti=&size=70"
-                },
-                {
-                    "_attributes": {
-                        "translation": "Cover"
-                    },
-                    "_text": "https://v19.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/373572034&token=c1322402"
                 }
             ]
         },
@@ -1392,12 +1358,6 @@
                         "translation": "Cover"
                     },
                     "_text": "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=315276282&isbn=&lid=&aut=&ti=&size=70"
-                },
-                {
-                    "_attributes": {
-                        "translation": "Cover"
-                    },
-                    "_text": "https://v19.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/315276282&token=c1322402"
                 }
             ]
         },
@@ -1647,12 +1607,6 @@
                         "translation": "Cover"
                     },
                     "_text": "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=339543833&isbn=&lid=&aut=&ti=&size=70"
-                },
-                {
-                    "_attributes": {
-                        "translation": "Cover"
-                    },
-                    "_text": "https://v19.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/339543833&token=c1322402"
                 }
             ]
         },
@@ -1903,12 +1857,6 @@
                         "translation": "Cover"
                     },
                     "_text": "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=406763364&isbn=&lid=&aut=&ti=&size=70"
-                },
-                {
-                    "_attributes": {
-                        "translation": "Cover"
-                    },
-                    "_text": "https://v19.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/406763364&token=c1322402"
                 }
             ]
         },
@@ -2214,12 +2162,6 @@
                         "translation": "Cover"
                     },
                     "_text": "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=363081666&isbn=9789025864118&lid=&aut=&ti=&size=70"
-                },
-                {
-                    "_attributes": {
-                        "translation": "Cover"
-                    },
-                    "_text": "https://v19.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/363081666&token=c1322402"
                 }
             ]
         },
@@ -2514,12 +2456,6 @@
                         "translation": "Cover"
                     },
                     "_text": "https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=252784723&isbn=9789025841843&lid=&aut=&ti=&size=70"
-                },
-                {
-                    "_attributes": {
-                        "translation": "Cover"
-                    },
-                    "_text": "https://v19.nbc.bibliotheek.nl/thumbnail?uri=http://data.bibliotheek.nl/ggc/ppn/252784723&token=c1322402"
                 }
             ]
         },
@@ -2532,16 +2468,7 @@
                 "\n        ",
                 "\n      "
             ],
-            "title": [
-                {
-                    "_attributes": {
-                        "translation": "Titel",
-                        "search-method": "title",
-                        "search-term": "Dolfje Weerwolfje",
-                        "search-type": "fuzzy"
-                    },
-                    "_text": "Dolfje Weerwolfje"
-                },
+            "title": 
                 {
                     "_attributes": {
                         "translation": "Titel",
@@ -2551,7 +2478,7 @@
                     },
                     "_text": "Dolfje Weerwolfje : een cd-rom voor jonge weerwolven / Paul van Loon ; [ill.: Hugo van Look ... et al. ; aanvullende teksten: Anne-Marie Vervelde ; programmeur: Frank Daalder ; realisatie/productie/geluid: Say Cheeze]"
                 }
-            ],
+            ,
             "short-title": [
                 {
                     "_attributes": {

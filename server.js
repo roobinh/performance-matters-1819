@@ -1,4 +1,5 @@
 const express = require('express')
+const gulp = require('gulp')
 const app = express()
 const port = 4000
 
@@ -7,6 +8,12 @@ app.set('view engine', 'ejs');
 
 // set default directory
 app.use(express.static('public'));
+
+// set cache control header for one month
+app.use((req, res, next) => {
+    res.setHeader('Cache-Control', 'max-age=' + 30 * 24 * 60 * 60);
+    next();
+})
 
 // index page 
 app.get('/', function(req, res) {

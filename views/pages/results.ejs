@@ -13,12 +13,20 @@
 
 <main>
     <div id="books" class="books">
-        <% jsonData.forEach(data => { %>
-            <% console.log(data.id._attributes.nativeid); %>
+        <% jsonData.forEach(data => { 
+        
+        var title = data.titles.title._text;
+        console.log("title = " + title)
+        var cover = data['coverimages']['coverimage'][0]['_text'];
+        console.log(cover);
+        var description = data['description']['physical-description']['_text'];
+        console.log("description = " + description)
+
+        %>
             <div class="book">
-                <h2 class="title"><%- data.id._attributes.nativeid %></h2>
-                <img class="cover" src="https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=301033811&isbn=&lid=&aut=&ti=&size=70"></h2>
-                <p class="description">Beschrijving komt hier</p>
+                <h2 class="title"><%- title %></h2>
+                <img class="cover" src = <%-cover%> ></h2>
+                <p class="description"> <%- description %> </p>
                 <a href="/availability/FRABLKOMTHIER">Beschikbaarheid</a>
             </div>
         <% }); %>
