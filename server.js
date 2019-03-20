@@ -1,5 +1,19 @@
+//server.js('npm start')
+
 const express = require('express')
+
 const gulp = require('gulp')
+const concat = require('gulp-concat')
+const cssnano = require('gulp-cssnano')
+const baseDir = 'public/'
+
+gulp.src([
+    baseDir + 'css/styles.css'
+])
+    .pipe(concat('styles.css'))
+    .pipe(cssnano({discardComments: {removeAll: true }}))
+    .pipe(gulp.dest('public/optimized/'))
+    
 const app = express()
 const port = 4000
 

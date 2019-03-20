@@ -16,11 +16,8 @@
         <% jsonData.forEach(data => { 
         
         var title = data.titles.title._text;
-        console.log("title = " + title)
         var cover = data['coverimages']['coverimage'][0]['_text'];
-        console.log(cover);
         var description = data['description']['physical-description']['_text'];
-        console.log("description = " + description)
 
         %>
             <div class="book">
