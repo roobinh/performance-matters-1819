@@ -3,17 +3,40 @@
 const express = require('express')
 
 const gulp = require('gulp')
+const rev = require('gulp-rev')
+
 const concat = require('gulp-concat')
 const cssnano = require('gulp-cssnano')
-const baseDir = 'public/'
+const baseDir = 'public'
 
+const inputDir = 'public/'
+const outputDir = 'public/cache/'
+const mainifestFilename = 'rev-manifest.json'
+
+// minify styles.css
 gulp.src([
-    baseDir + 'css/styles.css'
+    baseDir + '/css/styles.css'
 ])
     .pipe(concat('styles.css'))
     .pipe(cssnano({discardComments: {removeAll: true }}))
     .pipe(gulp.dest('public/optimized/'))
-    
+
+// add hash to styles.css
+gulp.src([
+    baseDir + '/optimized/*.css'
+])
+    .pipe(rev())
+    .pipe(gulp.dest(inputDir))
+    .pipe(rev.manifest(mainifestFilename))
+    .pipe(gulp.dest(outputDir));
+
+// gulp.src(
+//     'views/partials.head.ejs'
+// )
+//     .pipe(revReplace({ 
+//         mainfest: gulp.src('public/cache/' + manifestFileName)
+//     }))
+
 const app = express()
 const port = 4000
 
@@ -24,10 +47,10 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 // set cache control header for one month
-app.use((req, res, next) => {
-    res.setHeader('Cache-Control', 'max-age=' + 30 * 24 * 60 * 60);
-    next();
-})
+// app.use((req, res, next) => {
+//     res.setHeader('Cache-Control', 'max-age=' + 30 * 24 * 60 * 60);
+//     next();
+// })
 
 // index page 
 app.get('/', function(req, res) {
