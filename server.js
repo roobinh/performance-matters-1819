@@ -1,19 +1,22 @@
-//server.js('npm start')
+//server.js ('npm start')
 
 const express = require('express')
+const app = express()
+const port = 4000
 
 const gulp = require('gulp')
 const rev = require('gulp-rev')
-
 const concat = require('gulp-concat')
 const cssnano = require('gulp-cssnano')
-const baseDir = 'public'
+const revReplace = require('gulp-rev-replace');
 
-const inputDir = 'public/'
+const baseDir = 'public'
+const inputDir = 'public/css'
 const outputDir = 'public/cache/'
 const mainifestFilename = 'rev-manifest.json'
 
 // minify styles.css
+
 gulp.src([
     baseDir + '/css/styles.css'
 ])
@@ -30,21 +33,19 @@ gulp.src([
     .pipe(rev.manifest(mainifestFilename))
     .pipe(gulp.dest(outputDir));
 
-// gulp.src(
-//     'views/partials.head.ejs'
-// )
-//     .pipe(revReplace({ 
-//         mainfest: gulp.src('public/cache/' + manifestFileName)
+// Change 
+// gulp.src('/views/partials/head.ejs')
+//     .pipe(revReplace({
+//         manifest: gulp.src(baseDir + mainifestFilename)
 //     }))
+//     .pipe(gulp.dest(baseDir + '/optimized'))
 
-const app = express()
-const port = 4000
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
 // set default directory
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 // set cache control header for one month
 // app.use((req, res, next) => {
@@ -85,6 +86,4 @@ app.get('/availability/:frabl', function (req, res) {
     });
 });
 
-
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`App running, listening on port ${port}!`))
