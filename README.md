@@ -6,7 +6,7 @@
 3. Stappenplan
 
 ## 1. Inleiding
-Voor het vak perfomance matters gaan we onze OBA applicatie herbouwen van client-side renderen naar server site rendering. Dit heeft meerdere voordelen, zoals het renderen van je webpagina zonder javascript.
+Voor het vak perfomance matters gaan we onze OBA applicatie herbouwen van client-side renderen naar server side rendering. Dit heeft meerdere voordelen, zoals het renderen van je webpagina zonder javascript.
 
 
 ## 2. Installatie
@@ -38,8 +38,17 @@ npm start
 - [ ] (optioneel) OBA API in applicatie verwerken
 
 
-Hulpbestanden:
-
-github.com/vandijkstef/performance-matters-1819
--> node advanced
-
+Inhoud readme.md:
+    -Inleiding
+    -Installatie
+    -NPM scripts
+    -Optimalisaties + Invloed 
+        -Server side rendering (gulp, nodejs, express)
+        -Minifying css
+        -Caching css
+        -Custom Local font
+        -Image filesize (srcset)
+        -Meta tag
+    -Service worker
+    -Conclusie
+    
