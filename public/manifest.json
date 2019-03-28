@@ -1,0 +1,11 @@
+{
+  "name": "OBA",
+  "short_name": "OBA",
+  "theme_color": "#f32121",
+  "background_color": "#2196f3",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": "/home",
+  "icons": null,
+  "splash_pages": null
+}

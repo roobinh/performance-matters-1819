@@ -25,13 +25,13 @@ gulp.src([
     .pipe(gulp.dest('public/optimized/'))
 
 // add hash to styles.css
-gulp.src([
-    baseDir + '/optimized/*.css'
-])
-    .pipe(rev())
-    .pipe(gulp.dest(inputDir))
-    .pipe(rev.manifest(mainifestFilename))
-    .pipe(gulp.dest(outputDir));
+// gulp.src([
+//     baseDir + '/optimized/*.css'
+// ])
+//     .pipe(rev())
+//     .pipe(gulp.dest(inputDir))
+//     .pipe(rev.manifest(mainifestFilename))
+//     .pipe(gulp.dest(outputDir));
 
 // Change 
 // gulp.src('/views/partials/head.ejs')

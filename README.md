@@ -12,7 +12,7 @@ Voor het vak perfomance matters gaan we onze OBA applicatie herbouwen van client
 ## 2. Installatie
 Clone het project door de volgende command:
 ```
-git clone https://github.com/roobinh/web-app-from-scratch-18-19
+git clone https://github.com/roobinh/performance-matters-1819
 ```
 
 Installeer daarna de modules door de volgende commands:
