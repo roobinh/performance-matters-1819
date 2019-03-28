@@ -1,5 +1,5 @@
 self.addEventListener('install', (event) => {
-    console.log("installing service worker...", event);
+    console.log("service worker: install...", event);
 
     event.waitUntil(
         caches.open('core-cache')
@@ -8,12 +8,11 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('activate', (event) => {
-    console.log("activating service worker...", event)
-
+    console.log("service worker: activate...", event)
 });
 
 self.addEventListener('fetch', (event) => {
-    console.log("fetching service worker...", event.request.url)
+    console.log("service worker: fetch...", event.request.url)
     
     if(isHtmlGetRequest(event.request)) {
         event.respondWith(fetch(event.request).catch(err => {

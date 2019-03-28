@@ -1,5 +1,9 @@
 //server.js ('npm start')
 
+var options = {
+    maxAge: '1d'
+}
+
 const express = require('express')
 const app = express()
 const port = 4000
@@ -15,8 +19,13 @@ const inputDir = 'public/css'
 const outputDir = 'public/cache/'
 const mainifestFilename = 'rev-manifest.json'
 
-// minify styles.css
+// set the view engine to ejs
+app.set('view engine', 'ejs');
 
+// set default directory
+app.use(express.static(__dirname + '/public', options));
+
+// minify styles.css and save to '/optimized/styles.css'
 gulp.src([
     baseDir + '/css/styles.css'
 ])
@@ -25,33 +34,21 @@ gulp.src([
     .pipe(gulp.dest('public/optimized/'))
 
 // add hash to styles.css
-// gulp.src([
-//     baseDir + '/optimized/*.css'
-// ])
-//     .pipe(rev())
-//     .pipe(gulp.dest(inputDir))
-//     .pipe(rev.manifest(mainifestFilename))
-//     .pipe(gulp.dest(outputDir));
+gulp.src([
+    baseDir + '/optimized/styles.css'
+])
+    .pipe(rev())
+    .pipe(gulp.dest(inputDir))
+    .pipe(rev.manifest(mainifestFilename))
+    .pipe(gulp.dest(outputDir));
 
-// Change 
+/* Set header to new css file
 // gulp.src('/views/partials/head.ejs')
 //     .pipe(revReplace({
 //         manifest: gulp.src(baseDir + mainifestFilename)
 //     }))
 //     .pipe(gulp.dest(baseDir + '/optimized'))
-
-
-// set the view engine to ejs
-app.set('view engine', 'ejs');
-
-// set default directory
-app.use(express.static(__dirname + '/public'));
-
-// set cache control header for one month
-// app.use((req, res, next) => {
-//     res.setHeader('Cache-Control', 'max-age=' + 30 * 24 * 60 * 60);
-//     next();
-// })
+*/
 
 // index page 
 app.get('/', function(req, res) {
