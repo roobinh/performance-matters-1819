@@ -17,12 +17,12 @@ git clone https://github.com/roobinh/performance-matters-1819
 
 Installeer daarna de modules door de volgende commands:
 ```
-cd web-app-from-scratch-18-19/week1
+cd [your_path_here]/performance-matters-1819/assignment
 npm install
 npm build
 ```
 
-Tot slot, start de server :)
+Tot slot, start de server
 ```
 npm start
 ```
