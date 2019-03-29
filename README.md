@@ -14,7 +14,6 @@
   + 3.7 First View
 * [4. Service Worker](#4)
 * [5. Conclusie](#5)
-* [6. Extra: Grading](#6)
 
 ## 1. Inleiding
 Voor het vak perfomance matters ga ik mijn OBA applicatie herbouwen van client-side rendering naar server side rendering. Dit heeft meerdere voordelen, zoals het renderen van je webpagina zonder javascript. Naast dat gaan we verschillende optimalizaties toepassen, die de performance van de site drasitsch verbeteren.
@@ -197,6 +196,6 @@ function isHtmlGetRequest(request) {
 ```
 
 ## 5. Conclusie
-Al met al was het zeer leerzaam om te leren hoe je precies dezelfde pagina veel sneller kan laden door middel van de genoemde technieken
+Al met al was het zeer leerzaam om te leren hoe je precies dezelfde pagina veel sneller kan laden door middel van de genoemde technieken.
 
 Bedankt voor het lezen!
