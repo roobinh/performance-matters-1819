@@ -1,11 +1,15 @@
 
+/* not working
 @font-face {
     font-family: 'Inconsolata'; src: url(../fonts/Inconsolata-Regular.ttf);
     font-family: sans-serif;
 }
+*/
+
 
 body {
     background-color: white;
+    font-family: 'Inconsolata', monospace;
 }
 
 .header {

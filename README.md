@@ -199,3 +199,12 @@ function isHtmlGetRequest(request) {
 Al met al was het zeer leerzaam om te leren hoe je precies dezelfde pagina veel sneller kan laden door middel van de genoemde technieken.
 
 Bedankt voor het lezen!
+
+
+## 6. Grading
+Voor nu nog geen voldoende (cijfer: 5)
+Onderstaande dingen fixen voor voldoende:
+
+- Service worker moet ook CSS en JavaScript cachen, ook moet de frontpagina weergeven dat je offline bent.
+- Font moet eerst fallback, dan font inladen (zodat je al wel iets hebt)
+- Site moet op heroku runnen
