@@ -62,7 +62,6 @@ app.get('/home', function(req, res) {
 
 // results page
 app.get('/results', function (req, res, next) {
-
     const json = require('./public/data/dolfje_books.json');
 
     res.render('pages/results', {
@@ -76,7 +75,6 @@ app.get('/availability/:frabl', function (req, res) {
     const json = require('./public/data/dolfje_availability.json');
 
     // Data hier strippen/mappen
-
     res.render('pages/availability', {
         jsonData: json,
         frabl: req.params
