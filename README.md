@@ -17,7 +17,15 @@
 * [6. Extra: Grading](#6)
 
 ## 1. Inleiding
-Voor het vak perfomance matters ga ik mijn OBA applicatie herbouwen van client-side rendering naar server side rendering. Dit heeft meerdere voordelen, zoals het renderen van je webpagina zonder javascript.
+Voor het vak perfomance matters ga ik mijn OBA applicatie herbouwen van client-side rendering naar server side rendering. Dit heeft meerdere voordelen, zoals het renderen van je webpagina zonder javascript. Naast dat gaan we verschillende optimalizaties toepassen, die de performance van de site drasitsch verbeteren.
+
+**In dit document ga je zien hoe de performance van de site van:**
+<img src="https://i.ibb.co/61BDtcV/image.png">
+
+**Naar:**
+<img src="https://i.ibb.co/ky1qRhC/image.png">
+
+**Is gegaan!**
 
 
 ## 2. Installatie
@@ -94,10 +102,15 @@ app.use(express.static(__dirname + '/public', options));
 ```
 
 ### 3.4 Custom Local Font
-In plaats van het laden van de google font via de google API, wordt de font lokaal vanaf de server ingeladen. Dit zorgt ervoor dat de font ook gecached wordt. Dit wordt gedaan door de onderstaande code:
+In plaats van het laden van de google font via de google API, wordt de font lokaal vanaf de server ingeladen. Dit zorgt ervoor dat de font ook gecached wordt (ook is er een fallback font). Dit wordt gedaan door de onderstaande code:
 
 ```css
-@font-face { font-family: 'Inconsolata'; src: url(../fonts/Inconsolata-Regular.ttf);}
+
+@font-face {
+    font-family: 'Inconsolata'; src: url(../fonts/Inconsolata-Regular.ttf);
+    font-family: sans-serif;
+}
+
 ```
 
 ### 3.5 Image Filesize
@@ -124,7 +137,7 @@ Na het zoeken kom je op de overzicht pagina, hier staan alle boeken die overeenk
 https://cover.biblion.nl/coverlist.dll?doctype=morebutton&bibliotheek=oba&style=0&ppn=270066586&isbn=9789066921863&lid=&aut=&ti=&size=70 <---- Hier
 ```
 
-Omdat de default op 70 staat, heb ik deze op 70 gelaten. Afbeeldingen zijn nu duidelijk te zien en niet te groot
+Omdat de default op 70 staat, heb ik deze op 70 gelaten. Afbeeldingen zijn nu duidelijk te zien en prima filesize.
 
 ### 3.6 Meta Tag
 De onderstaande code heeft geen invloed op de performance, maar wel om zeker te weten dat de juiste viewports gebruikt worden.
@@ -184,6 +197,6 @@ function isHtmlGetRequest(request) {
 ```
 
 ## 5. Conclusie
+Al met al was het zeer leerzaam om te leren hoe je precies dezelfde pagina veel sneller kan laden door middel van de genoemde technieken
 
-
-
+Bedankt voor het lezen!
