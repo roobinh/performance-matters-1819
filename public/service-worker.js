@@ -4,7 +4,7 @@ var cacheVersion = 1
 var currentCache = {
     offline: 'offline-cache' + cacheVersion
 }
-var offlineUrls = [ '/', '/home', '/results', '/results?' ];
+var offlineUrls = [ '/', '/home', '/results', '/results?', '/offline'];
 
 self.addEventListener('install', (event) => {
     console.log("service worker: install...", event);
@@ -25,15 +25,25 @@ self.addEventListener('fetch', (event) => {
     console.log("service worker: fetch...", event.request.url)
     
     event.respondWith(
-        caches.match(event.request)
+
+        fetch(event.request).catch(error => {
+            console.log('Fetch failed; returning offline page instead.', error);
+            return caches.match('/offline');
+        }
+
+        /*
+            caches.match(event.request)
           .then(function(response) {
             // Cache hit - return response
+            
+            // return caches.match('/offline');
             if (response) {
               return response
             }
-            return fetch(event.request)
+            return fetch(event.request) 
         })
-    )
+        */
+    ))
 });
 
 function isHtmlGetRequest(request) {

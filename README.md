@@ -104,12 +104,10 @@ app.use(express.static(__dirname + '/public', options));
 In plaats van het laden van de google font via de google API, wordt de font lokaal vanaf de server ingeladen. Dit zorgt ervoor dat de font ook gecached wordt (ook is er een fallback font). Dit wordt gedaan door de onderstaande code:
 
 ```css
-
 @font-face {
     font-family: 'Inconsolata'; src: url(../fonts/Inconsolata-Regular.ttf);
     font-family: sans-serif;
 }
-
 ```
 
 ### 3.5 Image Filesize

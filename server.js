@@ -81,4 +81,8 @@ app.get('/availability/:frabl', function (req, res) {
     });
 });
 
+app.get('/offline', function(req, res) {
+    res.render('pages/offline')
+})
+
 app.listen(port, () => console.log(`App running, listening on port ${port}!`))
