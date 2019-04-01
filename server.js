@@ -8,11 +8,11 @@ const express = require('express')
 const app = express()
 const port = 4000
 
-const gulp = require('gulp')
-const rev = require('gulp-rev')
-const concat = require('gulp-concat')
-const cssnano = require('gulp-cssnano')
-const revReplace = require('gulp-rev-replace');
+// const gulp = require('gulp')
+// const rev = require('gulp-rev')
+// const concat = require('gulp-concat')
+// const cssnano = require('gulp-cssnano')
+// const revReplace = require('gulp-rev-replace');
 
 const baseDir = 'public'
 const inputDir = 'public/css'
@@ -26,21 +26,21 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public', options));
 
 // minify styles.css and save to '/optimized/styles.css'
-gulp.src([
-    baseDir + '/css/styles.css'
-])
-    .pipe(concat('styles.css'))
-    .pipe(cssnano({discardComments: {removeAll: true }}))
-    .pipe(gulp.dest('public/optimized/'))
+// gulp.src([
+//     baseDir + '/css/styles.css'
+// ])
+//     .pipe(concat('styles.css'))
+//     .pipe(cssnano({discardComments: {removeAll: true }}))
+//     .pipe(gulp.dest('public/optimized/'))
 
 // add hash to styles.css
-gulp.src([
-    baseDir + '/optimized/styles.css'
-])
-    .pipe(rev())
-    .pipe(gulp.dest(inputDir))
-    .pipe(rev.manifest(mainifestFilename))
-    .pipe(gulp.dest(outputDir));
+// gulp.src([
+//     baseDir + '/optimized/styles.css'
+// ])
+//     .pipe(rev())
+//     .pipe(gulp.dest(inputDir))
+//     .pipe(rev.manifest(mainifestFilename))
+//     .pipe(gulp.dest(outputDir));
 
 /* Set header to new css file
 // gulp.src('/views/partials/head.ejs')
