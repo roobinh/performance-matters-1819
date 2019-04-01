@@ -6,7 +6,7 @@ var options = {
 
 const express = require('express')
 const app = express()
-const port = PROCESS.env.PORT || 4000
+const port = process.env.PORT || 4000
 
 // const gulp = require('gulp')
 // const rev = require('gulp-rev')
