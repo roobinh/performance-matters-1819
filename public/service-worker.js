@@ -25,24 +25,10 @@ self.addEventListener('fetch', (event) => {
     console.log("service worker: fetch...", event.request.url)
     
     event.respondWith(
-
         fetch(event.request).catch(error => {
             console.log('Fetch failed; returning offline page instead.', error);
             return caches.match('/offline');
-        }
-
-        /*
-            caches.match(event.request)
-          .then(function(response) {
-            // Cache hit - return response
-            
-            // return caches.match('/offline');
-            if (response) {
-              return response
-            }
-            return fetch(event.request) 
-        })
-        */
+        }        
     ))
 });
 
