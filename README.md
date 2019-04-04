@@ -196,9 +196,13 @@ Bedankt voor het lezen!
 
 
 ## 6. Grading
-Voor nu nog geen voldoende (cijfer: 5)
+Voldoende (cijfer: 7)
+
+`Update: Bovenstaande gefixt en nu wel voldoende!`
+
 Onderstaande dingen fixen voor voldoende:
 
 - Service worker moet ook CSS en JavaScript cachen, ook moet de frontpagina weergeven dat je offline bent.
 - Font moet eerst fallback, dan font inladen (zodat je al wel iets hebt)
 - Site moet op heroku runnen
+
