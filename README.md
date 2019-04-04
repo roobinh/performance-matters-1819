@@ -198,7 +198,7 @@ Bedankt voor het lezen!
 ## 6. Grading
 Voldoende (cijfer: 7)
 
-`Update: Bovenstaande gefixt en nu wel voldoende!`
+`Update: Onderstaande gefixt en nu wel voldoende!`
 
 Onderstaande dingen fixen voor voldoende:
 
